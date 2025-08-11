@@ -1,5 +1,5 @@
 # PDF → Speech Converter
-A FastAPI-based web application that converts the text from PDF files into downloadable speech audio (MP3) using OpenAI's gpt-4o-mini-tts model.
+A FastAPI-based web application that converts the text from PDF files into downloadable speech audio (MP3) using OpenAI's ```gpt-4o-mini-tts``` model.
 
 ---
 
@@ -37,17 +37,17 @@ pdf-text-to-speech/
 
 ## Installation
 1. Clone the repository:
-   git clone https://github.com/yourusername/pdf-to-speech.git
-   cd pdf-text-to-speech
+   ```git clone https://github.com/yourusername/pdf-to-speech.git```
+   ```cd pdf-text-to-speech```
 
 2. Install dependencies:
-    pip install -r requirements.txt
+    ```pip install -r requirements.txt```
 
 3. Set environment variables:
-    OPENAI_API_KEY=sk...
+    ```OPENAI_API_KEY=sk...```
 
 3. Run the app:
-    uvicorn main:app --reload
+    ```uvicorn main:app --reload```
 
 4. Open in browser:
     http://127.0.0.1:8000
@@ -55,15 +55,15 @@ pdf-text-to-speech/
 ---
 
 ## Pricing
-This app uses OpenAI's Text-to-Speech API with the gpt-4o-mini-tts model. Pricing is based on the length of fenerated audio:
+This app uses OpenAI's Text-to-Speech API with the ```gpt-4o-mini-tts``` model. Pricing is based on the length of fenerated audio:
 
-| Model            | Price per minute of audio |
-|------------------|---------------------------|
-| gpt-4o-mini-tts  | $0.015 / minute           |
-| gpt-4o-tts       | $0.030 / minute           |
+| Model                  | Price per minute of audio |
+|------------------------|---------------------------|
+| ```gpt-4o-mini-tts```  | $0.015 / minute           |
+| ```gpt-4o-tts```       | $0.030 / minute           |
 
 - Short phrases like "This is a test" costs less than $0.001.
-- A 5-minute audio file with gpt-4o-mini-tts costs $0.075.
+- A 5-minute audio file with ```gpt-4o-mini-tts``` costs $0.075.
 - Costs are billed to your OpenAI account after free trial credits are used.
 
 ---
@@ -80,7 +80,7 @@ This app uses OpenAI's Text-to-Speech API with the gpt-4o-mini-tts model. Pricin
 - CSS and some HTML portions: Generated with assistance of AI (GPT-5).
 - Favicon: [Text to Speech](https://www.flaticon.com/free-icon/text-to-speech_7276123) icon from Flaticon.
 - FastAPI and Python backend: Mostly written by me.
-- OpenAI's gpt-4o-mini-tts model for text-to-speech synthesis.
+- OpenAI's ```gpt-4o-mini-tts model``` for text-to-speech synthesis.
 
 ---
 
