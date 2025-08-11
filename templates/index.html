@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>PDF Text to Speech</title>
+    <link rel="stylesheet" href="{{ url_for('static', path='style.css') }}">
+    <link rel="icon" href="{{ url_for('static', path='favicon.png') }}">
+    <meta name="description" content="Convert text in a PDF to speech as a .wav or .mp3 file" />
+</head>
+<body>
+    <h1>PDF to Speech</h1>
+    <form action="/text-to-speech" method="post" enctype="multipart/form-data">
+        <label for="file">Choose a PDF:</label>
+        <input type="file" id="file" name="file" accept=".pdf" required>
+
+        <label for="voice">Voice:</label>
+        <select id="voice" name="voice">
+            <option value="alloy" selected>Alloy</option>
+            <option value="echo">Echo</option>
+            <option value="fable">Fable</option>
+            <option value="onyx">Onyx</option>
+            <option value="nova">Nova</option>
+            <option value="shimmer">Shimmer</option>
+            <option value="coral">Coral</option>
+            <option value="verse">Verse</option>
+            <option value="ballad">Ballad</option>
+            <option value="ash">Ash</option>
+            <option value="sage">Sage</option>
+        </select>
+
+        <button type="submit">Convert to Speech</button>
+    </form>
+</body>
+</html>

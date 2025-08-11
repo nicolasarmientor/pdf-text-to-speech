@@ -1,0 +1,131 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg: #0b1020;
+    --bg-soft: #11162a;
+    --card: #0f162f;
+    --card-2: #141b35;
+    --text: #eaf0ff;
+    --muted: #a8b0c9;
+    --ring: #6aa6ff;
+    --accent: #3b82f6;
+    --accent-2: #2563eb;
+    --shadow: 0 10px 30px rgba(0,0,0,.35);
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background: radial-gradient(1200px 800px at 15% 10%, #1b2450 0%, transparent 50%),
+                radial-gradient(1000px 700px at 85% 0%, #0f2a5f 0%, transparent 45%),
+                var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    padding: 40px;
+}
+
+/* Container */
+form {
+    background: linear-gradient(180deg, var(--card) 0%, var(--card-2) 100%);
+    border: 1px solid rgba(255,255,255,.08);
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    padding: 24px 28px;
+    width: 100%;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-row {
+    display: flex;
+    gap: 15px;
+}
+
+.form-row > div {
+    flex: 1;
+}
+
+/* Headings */
+h1 {
+    font-size: 1.8rem;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 10px;
+    background: linear-gradient(90deg, #9ec5ff, #d1e3ff 70%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+/* Labels */
+label {
+    font-weight: 500;
+    font-size: 0.95rem;
+    margin-bottom: 4px;
+    display: block;
+    color: var(--muted);
+}
+
+/* Inputs & Selects */
+input[type="file"],
+select {
+    padding: 10px;
+    font-size: 0.95rem;
+    border: 1px solid rgba(255,255,255,.12);
+    border-radius: 8px;
+    background-color: var(--bg-soft);
+    color: var(--text);
+    transition: border-color 0.2s, background-color 0.2s;
+    width: 100%;
+}
+
+input[type="file"]:hover,
+select:hover {
+    border-color: var(--ring);
+}
+
+select {
+    cursor: pointer;
+}
+
+/* Button */
+button {
+    padding: 12px;
+    font-size: 1rem;
+    background: linear-gradient(180deg, var(--accent) 0%, var(--accent-2) 100%);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 8px 16px rgba(37, 99, 235, .25);
+    transition: background-color 0.2s, transform 0.1s, box-shadow 0.2s;
+}
+
+button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 10px 20px rgba(37, 99, 235, .28);
+}
+
+button:active {
+    transform: translateY(0);
+    box-shadow: 0 6px 12px rgba(37, 99, 235, .22);
+}
+
+/* Small responsive tweaks */
+@media (max-width: 600px) {
+    form {
+        padding: 20px;
+    }
+}
